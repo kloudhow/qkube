@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "qkube": "./dist/cli.js",
-    "qkubed": "./src/cli.js"
+    "qkube": "./dist/cli.js"
   },
   "files": [
     "dist/*"
