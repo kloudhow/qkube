@@ -1,0 +1,41 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+# Lock file
+package.json.lock
+package-lock.json
+yarn.lock
+# misc
+.DS_Store
+.DS_*
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build file
+#/dist
+*.log
+/.idea
+.idea
+.idea/*
+.out
+__snapshots__
+coverage
+dist/**/fixtures
+/generator
+/dev_generator
+/kloudhow_templates
+/binary
+/src
+*.sh
+config.js
+webpack.config.js
+test.js
