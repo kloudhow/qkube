@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "qkube": "./dist/cli.js"
+    "qkube": "./src/cli.js"
   },
   "files": [
     "dist/*"
@@ -14,7 +14,9 @@
     "build": "./node_modules/.bin/webpack && ./node_modules/.bin/javascript-obfuscator ./src/generator.js -o ./dist/generator.js --dead-code-injection true --control-flow-flattening true",
     "wp": "./node_modules/.bin/webpack --config ./generator/webpack.config.js",
     "bb": "./node_modules/.bin/javascript-obfuscator generator/index.js -o ./dist/generator.js",
-    "postbuild": "echo '#!/usr/bin/env node' | cat - ./dist/cli.js > ./dist/_cli.js && mv ./dist/_cli.js ./dist/cli.js && zip -r kloudhow_templates kloudhow_templates",
+    "postbuild": "echo '#!/usr/bin/env node' | cat - ./dist/cli.js > ./dist/_cli.js && mv ./dist/_cli.js ./dist/cli.js && npm run zip",
+    "zip": "zip -r kloudhow_templates kloudhow_templates",
+
     "__prepublishOnly": "cp package.json dist/package.json",
     "prepublishOnly": "npm run build",
     "pub": "npm version patch && npm publish  && head -n 20 package.json"
